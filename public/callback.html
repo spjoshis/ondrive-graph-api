@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    
+</head>
+<body>
+
+    <div id="api-response"></div>
+
+    <script>
+        var urlParams = new URLSearchParams(window.location.hash.replace("#", "?"));
+        axios.post("/callback", {
+            token: urlParams.get('access_token')
+        }).then(function (data) {
+            console.log(data)
+            document.getElementById("api-response").innerHTML = JSON.stringify(data.response.data);
+        }).catch((error) => {
+            console.log(error)
+            document.getElementById("api-response").innerHTML = JSON.stringify(error.response.data);
+        })
+    </script>
+</body>
+</html>
