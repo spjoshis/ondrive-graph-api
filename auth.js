@@ -1,9 +1,9 @@
 //MSAL configuration
 const msalConfig = {
     auth: {
-        clientId: '<your client ID here>',
+        clientId: 'a8e7f70d-asd-af88-4bc8-9ec9-5b3d2dd67600',
         // comment out if you use a multi-tenant AAD app
-        authority: 'https://login.microsoftonline.com/<your directory ID here>',
+        authority: 'https://login.microsoftonline.com/71d33bdf-asd--eca4-4f10-a51a-da14f6cbe975',
         redirectUri: 'http://localhost:8080'
     }
 };
